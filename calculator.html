@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>CALCULATOR APP</title>
+</head>
+
+<body>
+    <div>
+        <form>
+            <label>Enter the first number:</label>
+            <input id="first"></br>
+            <label>Enter the second number:</label>
+            <input id="second"></br>
+
+
+            <select id="operator">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+
+            <button onclick="calculate()">submit</button>
+            <h2>result:</h2>
+             <h3 id="resultext"></h3>
+        </form>
+        <A href="./index.html">
+            go back
+        </A>
+    </div>
+    <script>
+
+
+        function calculate() {
+            let no1 = parseInt(document.getElementById("first").value);
+            let no2 = parseInt(document.getElementById("second").value);
+            let op = document.getElementById("operator").value;
+            document.getElementById("resultext").innerText=result;
+            var result = 0;
+            if (op == "+") {
+                result = no1 + no2;
+            }
+            else if (op == "-") {
+                result = no1 - no2;
+            }
+            else if (op == "*") {
+                result = no1 * no2;
+            }
+            else if (op == "/") {
+                result = no1 / no2;
+            }
+             document.getElementById("resultext").innerText= result;
+           
+            event.preventDefault();
+
+        }
+console.log(result)
+            
+            
+
+    </script>
+
+</body>
+
+</html>
